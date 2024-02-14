@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Welcome, {{ user.first_name }}</h2>
+    
+    <h3>Income</h3>
+    <ul>
+        {% for income_entry in user.income_entries %}
+            <li>{{ income_entry.amount }} - {{ income_entry.category }} - {{ income_entry.date }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Expenses</h3>
+    <ul>
+        {% for expense_entry in user.expense_entries %}
+            <li>{{ expense_entry.amount }} - {{ expense_entry.category }} - {{ expense_entry.date }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Budget</h3>
+    <ul>
+        {% for budget_entry in user.budget_entries %}
+            <li>{{ budget_entry.amount }} - {{ budget_entry.category }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{{ url_for('auth.sign_out') }}">Sign Out</a>
+    <a href="{{ url_for('views.dashboard') }}">Dashboard</a>
+</body>
+</html>

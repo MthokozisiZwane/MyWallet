@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWallet/title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Income and Expense</h2>
+    
+    <h3>Add Income</h3>
+    <form action="{{ url_for('views.add_income') }}" method="post">
+        <label for="amount">Amount:</label><br>
+        <input type="text" id="amount" name="amount" required><br>
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category" required><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        <button type="submit">Add Income</button>
+    </form>
+    
+    <h3>Add Expense</h3>
+    <form action="{{ url_for('views.add_expense') }}" method="post">
+        <label for="amount">Amount:</label><br>
+        <input type="text" id="amount" name="amount" required><br>
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category" required><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+        <button type="submit">Add Expense</button>
+    </form>
+    
+    <h3>Income Entries</h3>
+    <ul>
+        {% for income_entry in user.income_entries %}
+            <li>{{ income_entry.amount }} - {{ income_entry.category }} - {{ income_entry.date }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Expense Entries</h3>
+    <ul>
+        {% for expense_entry in user.expense_entries %}
+            <li>{{ expense_entry.amount }} - {{ expense_entry.category }} - {{ expense_entry.date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

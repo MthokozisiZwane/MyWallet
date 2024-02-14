@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Monthly Report</h2>
+    <form action="{{ url_for('views.generate_monthly_report') }}" method="post">
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year" required>
+        <label for="month">Month:</label>
+        <input type="text" id="month" name="month" required>
+        <button type="submit">Generate Report</button>
+    </form>
+    
+    <!-- Financial Summary -->
+    <h3>Financial Summary</h3>
+    <p>Total Income: ${{ total_income }}</p>
+    <p>Total Expenses: ${{ total_expenses }}</p>
+    <p>Total Budget: ${{ total_budget }}</p>
+    
+    <!-- List of Income Entries -->
+    <h3>Income Entries</h3>
+    <ul>
+        {% for income in incomes %}
+            <li>{{ income.amount }} - {{ income.category }}</li>
+        {% endfor %}
+    </ul>
+    
+    <!-- List of Expense Entries -->
+    <h3>Expense Entries</h3>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.amount }} - {{ expense.category }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

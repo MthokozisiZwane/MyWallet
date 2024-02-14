@@ -1,0 +1,89 @@
+/* Styles for body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #333; /* Dark text color */
+}
+
+/* Styles for links */
+a {
+    color: #337ab7; /* Navy blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styles for forms */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #337ab7; /* Navy blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #23527c; /* Darker navy blue on hover */
+}
+
+/* Styles for lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Styles for alerts */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #3c763d; /* Green success alert text color */
+    background-color: #dff0d8; /* Light green success alert background color */
+    border-color: #d6e9c6; /* Light green success alert border color */
+}
+
+.alert-danger {
+    color: #a94442; /* Red danger alert text color */
+    background-color: #f2dede; /* Light red danger alert background color */
+    border-color: #ebccd1; /* Light red danger alert border color */
+}

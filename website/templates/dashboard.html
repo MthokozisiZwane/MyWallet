@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWallet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h2>Dashboard</h2>
+    
+    <!-- Display Budget -->
+    <h3>Budget</h3>
+    <ul>
+        {% for budget_entry in user.budget_entries %}
+            <li>{{ budget_entry.category }}: ${{ budget_entry.amount }}
+                <!-- Update Budget Form -->
+                <form action="{{ url_for('views.update_budget', category=budget_entry.category) }}" method="post">
+                    <label for="new_amount">New Amount:</label>
+                    <input type="text" id="new_amount" name="new_amount" required>
+                    <button type="submit">Update</button>
+                </form>
+                
+                <!-- Delete Budget Button -->
+                <form action="{{ url_for('views.delete_budget', category=budget_entry.category) }}" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- Set New Budget Form -->
+    <h3>Set New Budget</h3>
+    <form action="{{ url_for('views.set_budget') }}" method="post">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required>
+        <button type="submit">Set Budget</button>
+    </form>
+</body>
+</html>
