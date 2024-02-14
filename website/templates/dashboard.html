@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyWallet</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-
+    <a href="{{ url_for('views.home') }}">Go back home</a>
 </head>
 <body>
     <h2>Dashboard</h2>
@@ -16,14 +16,14 @@
         {% for budget_entry in user.budget_entries %}
             <li>{{ budget_entry.category }}: ${{ budget_entry.amount }}
                 <!-- Update Budget Form -->
-                <form action="{{ url_for('views.update_budget', category=budget_entry.category) }}" method="post">
+                <form action="{{ url_for('views.update_budgets', category=budget_entry.category) }}" method="post">
                     <label for="new_amount">New Amount:</label>
                     <input type="text" id="new_amount" name="new_amount" required>
                     <button type="submit">Update</button>
                 </form>
                 
                 <!-- Delete Budget Button -->
-                <form action="{{ url_for('views.delete_budget', category=budget_entry.category) }}" method="post">
+                <form action="{{ url_for('views.delete_budgets', category=budget_entry.category) }}" method="post">
                     <button type="submit">Delete</button>
                 </form>
             </li>
@@ -32,7 +32,7 @@
     
     <!-- Set New Budget Form -->
     <h3>Set New Budget</h3>
-    <form action="{{ url_for('views.set_budget') }}" method="post">
+    <form action="{{ url_for('views.set_budgets') }}" method="post">
         <label for="category">Category:</label>
         <input type="text" id="category" name="category" required>
         <label for="amount">Amount:</label>
