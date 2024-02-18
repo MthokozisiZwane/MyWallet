@@ -95,14 +95,14 @@ def add_income():
 
     if not (amount and category and date):
         flash('Please fill in all required fields for income.', 'error')
-        return redirect(url_for('views.home'))
+        return redirect(url_for('views.income_expense'))
 
     new_income = Income(amount=amount, date=date, category=category, user_id=current_user.id)
     db.session.add(new_income)
     db.session.commit()
 
     flash('Income added successfully.', 'success')
-    return redirect(url_for('views.home'))
+    return redirect(url_for('views.income_expense'))
 
 
 # function to add expense entry
@@ -116,14 +116,14 @@ def add_expense():
 
     if not (amount and category and date):
         flash('Please fill in all required fields for expense.', 'error')
-        return redirect(url_for('views.home'))
+        return redirect(url_for('views.income_expense'))
 
     new_expense = Expense(amount=amount, date=date, category=category, user_id=current_user.id)
     db.session.add(new_expense)
     db.session.commit()
 
     flash('Expense added successfully.', 'success')
-    return redirect(url_for('views.home'))
+    return redirect(url_for('views.income_expense'))
 
 
 # function to delete income entry
@@ -137,7 +137,7 @@ def delete_income(entry_id):
         flash('Income deleted successfully.', 'success')
     else:
         flash('Income not found or you do not have permission to delete it.', 'error')
-    return redirect(url_for('views.home'))
+    return redirect(url_for('views.income_expense'))
 
 # function to delete expense entry
 @views.route('/delete_expense/<int:entry_id>', methods=['POST'])
@@ -150,12 +150,13 @@ def delete_expense(entry_id):
         flash('Expense deleted successfully.', 'success')
     else:
         flash('Expense not found or you do not have permission to delete it.', 'error')
-    return redirect(url_for('views.home'))
+    return redirect(url_for('views.income_expense'))
 
 @views.route('/income_expense')
 @login_required
 def income_expense():
-    return render_template('income_expense.html')
+    user = current_user #define user
+    return render_template('income_expense.html', user=user)
 
 @views.route('/monthly_report')
 @login_required
@@ -213,7 +214,7 @@ def delete_budgets(category):
 
 
 # Route for generating the monthly report
-@views.route('/generate_monthly_report', methods=['POST'])
+@views.route('/generate_monthly_reports', methods=['POST'])
 @login_required
 def generate_monthly_reports():
     if request.method == 'POST':

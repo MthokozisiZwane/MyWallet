@@ -35,6 +35,7 @@ def sign_out():
     logout_user()
     flash('You have been signed out.', category='info')
     return redirect(url_for('auth.sign_in'))
+    
 
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
