@@ -32,6 +32,17 @@ class Income(db.Model):
         self.category = category
         self.user_id = user_id
 
+    # serializing to json format
+        
+    def to_dict(self):
+         return {
+              'id': self.id,
+            'amount': self.amount,
+            'date': self.date.strftime('%Y-%m-%d'),  # format the date as a string
+            'category': self.category,
+            'user_id': self.user_id
+         }
+
 class Expense(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Float, nullable=False)
@@ -44,7 +55,17 @@ class Expense(db.Model):
             self.date = date
             self.category = category
             self.user_id = user_id
-    
+
+    # serializing to json format
+    def to_dict(self):
+         return {
+              
+         'id': self.id,
+            'amount': self.amount,
+            'date': self.date.strftime('%Y-%m-%d'),  # format the date as a string
+            'category': self.category,
+            'user_id': self.user_id
+         }
 
 
 class Budget(db.Model):
@@ -57,3 +78,11 @@ class Budget(db.Model):
         self.user_id = user_id
         self.category = category
         self.amount = amount
+    # serializing to json format
+    def to_dict(self):
+         return {
+              'id': self.id,
+              'category': self.category,
+              'amount': self.amount,
+              'user_id':self.user_id
+         }

@@ -1,0 +1,29 @@
+h2{
+    text-align:center;
+    margin-top: 0px;
+}
+
+.rex{
+    display:flex;
+    gap: 10.0em;
+    margin-left: 100px;
+}
+
+header{
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    margin-top: 0%;
+}
+nav{
+    margin: 2em;
+    justify-content: space-betweens;
+    background-color: navy;
+    margin-top: auto;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+}

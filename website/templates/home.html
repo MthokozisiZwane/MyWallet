@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <!--<a href="{{ url_for('views.generate_monthly_reports') }}"> Generate Report</a>-->
+
 
 </head>
 <body>
+  <header>
+    <div></div>
+    <nav>
+      <ul>
+        <li>
+          <li><a href="{{ url_for('auth.sign_out') }}">Sign Out</a></li>
+          <li><a href="{{ url_for('views.dashboard') }}">Dashboard</a></li>
+          <li><a href="{{ url_for('views.income_expense') }}">Income and Expenses</a></li>
+          <li><a href="{{ url_for('views.monthly_report') }}">Monthly Report</a></li>
+      
+  
+        </li>
+      </ul>
+    </nav>
+      
+  </header>
     <h2>Welcome, {{ user.first_name }}</h2>
-    
+    <div class="rex">
     <h3>Income</h3>
     <ul>
         {% for income_entry in user.income_entries %}
@@ -23,19 +42,15 @@
             <li>{{ expense_entry.amount }} - {{ expense_entry.category }} - {{ expense_entry.date }}</li>
         {% endfor %}
     </ul>
-    
+    <div>
     <h3>Budget</h3>
     <ul>
         {% for budget_entry in user.budget_entries %}
             <li>{{ budget_entry.amount }} - {{ budget_entry.category }}</li>
         {% endfor %}
     </ul>
-    
-    <a href="{{ url_for('auth.sign_out') }}">Sign Out</a>
-    <a href="{{ url_for('views.dashboard') }}">Dashboard</a>
-    <a href="{{ url_for('views.income_expense') }}">Income and Expenses</a>
-    <a href="{{ url_for('views.monthly_report') }}">Monthly Report</a>
-    <a href="{{ url_for('views.generate_monthly_reports') }}"> Generate Report</a>
+  </div>
+  </div>
 
 </body>
 </html>

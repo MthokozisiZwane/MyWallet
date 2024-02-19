@@ -4,6 +4,7 @@ from website.models import Income, Expense, db, Budget
 from flask_login import login_required, current_user
 from sqlalchemy import extract
 from flask import jsonify
+from datetime import datetime
 
 
 views = Blueprint('views', __name__)
@@ -73,13 +74,17 @@ def generate_monthly_report(user_id, year, month):
     total_expenses = sum(expense.amount for expense in expenses)
     total_budget = sum(budget.amount for budget in budgets)
 
+
+    # Convert Budget instances to dictionaries
+    budget_dicts = [budget.to_dict() for budget in budgets]
+
     return {
         'total_income': total_income,
         'total_expenses': total_expenses,
         'total_budget': total_budget,
-        'incomes': incomes,
-        'expenses': expenses,
-        'budgets': budgets
+        'incomes': [income.to_dict() for income in incomes],
+        'expenses': [expense.to_dict() for expense in expenses],
+        'budgets': budget_dicts
     }
 
 
@@ -91,10 +96,17 @@ def add_income():
     amount = request.form.get('amount')
     category = request.form.get('category')
     description = request.form.get('description')
-    date = request.form.get('date')
+    date_str = request.form.get('date')
 
-    if not (amount and category and date):
+    if not (amount and category and date_str):
         flash('Please fill in all required fields for income.', 'error')
+        return redirect(url_for('views.income_expense'))
+    
+    try:
+        # converting date string to datetime object
+        date = datetime.strptime(date_str, '%Y-%m-%d')
+    except ValueError:
+        flash('Invalid date format. Please use YYYY -MM -DD format', 'error')
         return redirect(url_for('views.income_expense'))
 
     new_income = Income(amount=amount, date=date, category=category, user_id=current_user.id)
@@ -112,10 +124,18 @@ def add_expense():
     amount = request.form.get('amount')
     category = request.form.get('category')
     description = request.form.get('description')
-    date = request.form.get('date')
+    date_str = request.form.get('date')
 
-    if not (amount and category and date):
+    if not (amount and category and date_str):
         flash('Please fill in all required fields for expense.', 'error')
+        return redirect(url_for('views.income_expense'))
+    
+
+    try:
+        # converting date string to datetime object
+        date = datetime.strptime(date_str, '%Y-%m-%d')
+    except ValueError:
+        flash('Invalid date format. Please use YYYY -MM -DD format', 'error')
         return redirect(url_for('views.income_expense'))
 
     new_expense = Expense(amount=amount, date=date, category=category, user_id=current_user.id)
