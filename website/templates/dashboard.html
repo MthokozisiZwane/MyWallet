@@ -8,13 +8,25 @@
     <a href="{{ url_for('views.home') }}">Go back home</a>
 </head>
 <body>
+    <h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    </h1>
     <h2>Dashboard</h2>
     
     <!-- Display Budget -->
+    <div>
     <h3>Budget</h3>
     <ul>
         {% for budget_entry in user.budget_entries %}
-            <li>{{ budget_entry.category }}: ${{ budget_entry.amount }}
+            <li>{{ budget_entry.category }}: R{{ budget_entry.amount }}
                 <!-- Update Budget Form -->
                 <form action="{{ url_for('views.update_budgets', category=budget_entry.category) }}" method="post">
                     <label for="new_amount">New Amount:</label>
@@ -29,8 +41,9 @@
             </li>
         {% endfor %}
     </ul>
-    
+    </div>
     <!-- Set New Budget Form -->
+    <div>
     <h3>Set New Budget</h3>
     <form action="{{ url_for('views.set_budgets') }}" method="post">
         <label for="category">Category:</label>
@@ -39,5 +52,6 @@
         <input type="text" id="amount" name="amount" required>
         <button type="submit">Set Budget</button>
     </form>
+    </div>
 </body>
 </html>

@@ -87,3 +87,30 @@ li {
     background-color: #f2dede; /* Light red danger alert background color */
     border-color: #ebccd1; /* Light red danger alert border color */
 }
+
+/* styling for different sxreen sizes */
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column {
+    width: 50%;
+    float: left;
+}
+
+.item{
+    width: 30%;
+    margin-bottom: 20px;
+}

@@ -23,19 +23,23 @@
     <p>Total Budget: R{{ total_budget }}</p>
     
     <!-- List of Income Entries -->
+    <div>
     <h3>Income Entries</h3>
     <ul>
         {% for income in incomes %}
             <li>{{ income.amount }} - {{ income.category }}</li>
         {% endfor %}
     </ul>
+    </div>
     
     <!-- List of Expense Entries -->
+    <div>
     <h3>Expense Entries</h3>
     <ul>
         {% for expense in expenses %}
             <li>{{ expense.amount }} - {{ expense.category }}</li>
         {% endfor %}
     </ul>
+    </div>
 </body>
 </html>
