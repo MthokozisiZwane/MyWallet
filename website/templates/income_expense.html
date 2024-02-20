@@ -8,6 +8,17 @@
 
 </head>
 <body>
+    <h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    </h1>
     <h2>Income and Expense</h2>
     
     <h3>Add Income</h3>
@@ -31,19 +42,21 @@
         <input type="date" id="date" name="date" required><br><br>
         <button type="submit">Add Expense</button>
     </form>
-    
+    <div>
     <h3>Income Entries</h3>
     <ul>
         {% for income_entry in user.income_entries %}
             <li>{{ income_entry.amount }} - {{ income_entry.category }} - {{ income_entry.date }}</li>
         {% endfor %}
     </ul>
-    
+    </div>
+    <div>
     <h3>Expense Entries</h3>
     <ul>
         {% for expense_entry in user.expense_entries %}
             <li>{{ expense_entry.amount }} - {{ expense_entry.category }} - {{ expense_entry.date }}</li>
         {% endfor %}
     </ul>
+    </div>
 </body>
 </html>

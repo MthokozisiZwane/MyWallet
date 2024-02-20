@@ -28,6 +28,7 @@ def set_budget(user_id, category, amount):
         new_budget = Budget(user_id=user_id, category=category, amount=amount)
         db.session.add(new_budget)
     db.session.commit()
+    flash('A new budget has been set','success')
 
 # get or view your budget from database
 def get_budget(user_id, category):
@@ -45,6 +46,7 @@ def delete_budget(user_id, category):
     if budget:
         db.session.delete(budget)
         db.session.commit()
+        flash('Budget deleted successfully', 'sucess')
 
 
 # Generate monthly report
@@ -78,13 +80,35 @@ def generate_monthly_report(user_id, year, month):
     # Convert Budget instances to dictionaries
     budget_dicts = [budget.to_dict() for budget in budgets]
 
+    # formating incomes, expenses and budgets into dictionaries
+
+    formatted_incomes = [{
+        'category': income.category,
+        'amount': income.amount,
+        'date': income.date.strftime('%Y-%m-%d')
+    } for income in incomes]
+
+    formatted_expenses = [{
+        'category': expense.category,
+        'amount': expense.amount,
+        'date': expense.date.strftime('%Y-%m-%d')
+    } for expense in expenses]
+
+    formatted_budgets = [{
+        'category': budget.category,
+        'amount': budget.amount
+    } for budget in budgets]
+
+
     return {
+        'month': month,
+        'year': year,
         'total_income': total_income,
         'total_expenses': total_expenses,
         'total_budget': total_budget,
-        'incomes': [income.to_dict() for income in incomes],
-        'expenses': [expense.to_dict() for expense in expenses],
-        'budgets': budget_dicts
+        'incomes': formatted_incomes,
+        'expenses':formatted_expenses,
+        'budgets':  formatted_budgets
     }
 
 
@@ -243,5 +267,5 @@ def generate_monthly_reports():
         user_id = current_user.id
         report_data = generate_monthly_report(user_id, year, month)
         return jsonify(report_data)
-        return render_template('monthly_report.html', **report_data)
+        #return render_template('monthly_report.html', **report_data)
     return jsonify({'error': 'Method not allowed'}), 405
