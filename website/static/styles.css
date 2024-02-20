@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 *{
-    margin: 0;
+    /* margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -11,7 +11,9 @@
 body {
     background-color: #dfe9f5; 
 }
-
+.container{
+    margin-top: 150px;
+}
 .wrapper{
     width: 330px;
     padding: 2rem 1rem;
@@ -22,22 +24,21 @@ body {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Styles for headings */
 h1 {
     font-size: 2rem;
     color: #07001f; /* Dark text color */
     margin-bottom: 1.2rem;
+    font-weight: bold;
 }
 
 /* Styles for links */
 a {
-    color: #337ab7; /* Navy blue link color */
+    color: rgb(17, 107, 143);
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
 
 /* Styles for forms */
 form input {
@@ -69,17 +70,14 @@ textarea {
 }
 
 button {
-    font-size: 1rem;
-    margin-top: 1.8rem;
-    padding: 10px 0;
-    background-color: rgb(17, 107, 143); /* Navy blue button color */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    outline: none;
-    width: 90%;
-}
+   background-color: rgb(17, 107, 143);
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+} 
 
 button:hover {
     background: rgba(17, 107, 143, 0.877); /* Slightly transparent navy blue button color on hover*/

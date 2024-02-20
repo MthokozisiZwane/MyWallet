@@ -1,33 +1,56 @@
-h2{
-    text-align:center;
-    margin-top: 0px;
-}
 
 .rex{
     display:flex;
-    gap: 10.0em;
-    margin-left: 100px;
+    gap: 3em;
+    margin-left: 50px;
 }
 
-header{
-    align-items: center;
-    display:flex;
-    justify-content: space-between;
-    margin-top: 0%;
-}
-nav{
-    margin: 2em;
-    justify-content: space-betweens;
-    background-color: navy;
-    margin-top: auto;
-}
-nav ul li{
-    list-style-type: none;
+/* header{
+    box-sizing: border-box;
+    margin: 0;
     display: flex;
-    position: relative;
-    padding: 8px 12px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
 }
 
-.navbarScroll.navbarDark {
-    background-color: black;
+header li a button{
+    font-weight: 500;
+    font-size: 160x;
+    text-decoration: none;
 }
+
+.nav_links {
+    list-style: none;
+    justify-content: space-between;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    transition: all 0.3s ease 0s;
+    color: rgb(17, 107, 143);
+}
+
+.navbar-header button{
+    margin-left: 20px;
+    padding: 9px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar-header button:hover{
+    background-color: rgba(17, 107, 143,0.877);
+}
+
+.navbar-header h1{
+    cursor: pointer;
+    margin-right: auto;
+} */
