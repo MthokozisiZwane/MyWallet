@@ -13,7 +13,11 @@
     transition: 0.3s color;
 }
 
-
+.signout-button{
+     font-size: 14px;
+     font-weight: normal;
+     padding: 8px 20px;
+}
 .signout-button:hover{
     background-color: rgba(17, 107, 143, 0.877);
 }

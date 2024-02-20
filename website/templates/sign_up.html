@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <h1 id="title">MyWallet</h1>
     <div class="wrapper">
     <h1>Sign Up</h1>
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -28,7 +29,7 @@
 
         <div class="terms">
         <input type="checkbox" id="checkbox">
-        <label for="checkbox">I agree to the <a href="#">terms and conditions</a></label>
+        <label for="checkbox">I agree to the <a href="#">terms and conditions</a></label></div>
         <button type="submit">Sign Up</button>
         <div class="member">
             Already a member?<a href="{{ url_for('auth.sign_in') }}">Login Here</a>
