@@ -23,7 +23,11 @@ nav{
 }
 nav ul li{
     list-style-type: none;
-    display: inline-block;
+    display: flex;
     position: relative;
     padding: 8px 12px;
+}
+
+.navbarScroll.navbarDark {
+    background-color: black;
 }
