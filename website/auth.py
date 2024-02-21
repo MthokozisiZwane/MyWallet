@@ -20,7 +20,6 @@ def sign_in():
         if user:
             if password and check_password_hash(user.password, password):
                 login_user(user, remember=True)
-                flash('Signed in successfully', category='success')
                 return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password, please try again.', category='error')
@@ -28,6 +27,7 @@ def sign_in():
             flash('Email does not exist.', category='error')
 
     return render_template("sign_in.html", user=current_user)
+            # flash('Signed in successfully', category='success')
 
 @auth.route('/sign-out')
 @login_required

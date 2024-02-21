@@ -1,45 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monthly Report</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <h2>Monthly Report</h2>
-    <form action="{{ url_for('views.generate_monthly_reports') }}" method="post">
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year" required>
-        <label for="month">Month:</label>
-        <input type="text" id="month" name="month" required>
-        <button type="submit">Generate Report</button>
-    </form>
-    
-    <!-- Financial Summary -->
-    <h3>Financial Summary</h3>
-    <p>Total Income: R{{ total_income }}</p>
-    <p>Total Expenses: R{{ total_expenses }}</p>
-    <p>Total Budget: R{{ total_budget }}</p>
-    
-    <!-- List of Income Entries -->
-    <div>
-    <h3>Income Entries</h3>
-    <ul>
-        {% for income in incomes %}
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='navbar.css') }}"
+    />
+  </head>
+  <body>
+    <!--BootStrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <header class="navbar-header">
+      <!--NavBar-->
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand me-auto" href="{{url_for('views.home')}}"
+            >MyWallet</a
+          >
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                MyWallet
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="{{url_for('views.dashboard')}}"
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active mx-lg-2"
+                    aria-current="page"
+                    href="{{url_for('views.income_expense')}}"
+                    >Income and Expenses</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active mx-lg-2"
+                    aria-current="page"
+                    href="{{url_for('views.monthly_report')}}"
+                    >Monthly Report</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="{{ url_for('auth.sign_out') }}"
+            ><button class="signout-button">Sign Out</button></a
+          >
+          <button
+            class="navbar-toggler pe-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+      <!--End Navbar-->
+    </header>
+    <div class="container">
+      <h2>Monthly Report</h2>
+      <div class="wrapper" id="budget">
+        <form
+          action="{{ url_for('views.generate_monthly_reports') }}"
+          method="post"
+        >
+          <label for="year">Year:</label>
+          <input type="text" id="year" name="year" required />
+          <label for="month">Month:</label>
+          <input type="text" id="month" name="month" required />
+          <button type="submit">Generate Report</button>
+        </form>
+      </div>
+
+      <div class="rex">
+        <div class="wrapper">
+          <!-- Financial Summary -->
+          <h3>Financial Summary</h3>
+          <p>Total Income: R{{ total_income }}</p>
+          <p>Total Expenses: R{{ total_expenses }}</p>
+          <p>Total Budget: R{{ total_budget }}</p>
+        </div>
+
+        <div class="wrapper">
+          <!-- List of Income Entries -->
+
+          <h3>Income Entries</h3>
+          <ul>
+            {% for income in incomes %}
             <li>{{ income.amount }} - {{ income.category }}</li>
-        {% endfor %}
-    </ul>
-    </div>
-    
-    <!-- List of Expense Entries -->
-    <div>
-    <h3>Expense Entries</h3>
-    <ul>
-        {% for expense in expenses %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <!-- List of Expense Entries -->
+          <h3>Expense Entries</h3>
+          <ul>
+            {% for expense in expenses %}
             <li>{{ expense.amount }} - {{ expense.category }}</li>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
