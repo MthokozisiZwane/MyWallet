@@ -23,8 +23,13 @@
     {% endwith %}
   </h1>
   <header>
-    <div></div>
-    <nav>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+
+    </div>
+    <nav class="menu">
       <ul>
         <li>
           <li><a href="{{ url_for('auth.sign_out') }}">Sign Out</a></li>
@@ -36,6 +41,10 @@
         </li>
       </ul>
     </nav>
+    <script>function toggleMenu() {
+      var menu = document.querySelector('.menu');
+      menu.classList.toggle('active'); 
+  }</script>
       
   </header>
     <h2>Welcome, {{ user.first_name }}</h2>
