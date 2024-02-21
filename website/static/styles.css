@@ -1,30 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Styles for body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; /* Light grey background TypeError #f5f5f5*/ 
-    color: #333; /* Dark text color */
-    margin: 0;
-    padding: 0;
+    background-color: #dfe9f5;
+}
+.container{
+    margin-top: 150px;
+}
+.wrapper{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.rex{
+    display: flex;
+    gap: 3.5em;
 }
 
 /* Styles for headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #333; /* Dark text color */
+h1 {
+    font-size: 2rem;
+    color: #07001f; /* Dark text color */
+    margin-bottom: 1.2rem;
+    font-weight: bold;
 }
+#title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: rgb(17, 107, 143);
+    font-weight: normal;
+}
+
 
 /* Styles for links */
 a {
-    color: #337ab7; /* Navy blue link color */
+    color: rgb(17, 107, 143);
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
 
 /* Styles for forms */
-form {
-    margin-bottom: 20px;
+form input {
+     width: 92%;
+    outline:none;
+    border:1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px ;
+    border-radius: 20px;
+    background: #e4e4e4;
 }
 
 label {
@@ -32,30 +67,73 @@ label {
     margin-bottom: 5px;
 }
 
+.text-entry{
+    display: flex;
+    gap: 0.5rem;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
 textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc; /* Light grey border */
-    border-radius: 4px;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
 button {
+   background-color: rgb(17, 107, 143);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
     padding: 10px 20px;
-    background-color: #337ab7; /* Navy blue button color */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 4px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+} 
+
+button:hover {
+    background: rgba(17, 107, 143, 0.877); /* Slightly transparent navy blue button color on hover*/
+}
+
+input:focus{
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.terms{
+    margin-top: 0.2rem;
+}
+
+.terms input{
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #23527c; /* Darker navy blue on hover */
+.terms label{
+    font-size: 0.7rem;
+}
+
+.terms a{
+    color:rgb(17, 107, 143);
+    text-decoration: none;
+}
+
+.member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
+}
+
+.member a {
+    color: rgb(17, 107, 143);
+    text-decoration: none;
 }
 
 /* Styles for lists */
@@ -88,8 +166,8 @@ li {
     border-color: #ebccd1; /* Light red danger alert border color */
 }
 
-/* styling for different sxreen sizes */
 
+<<<<<<< HEAD
 /* menu button*/
 .menu-btn {
     display: none;
@@ -136,22 +214,17 @@ li {
         display: block;
     }
     
+=======
+#budget{
+    width: auto;
+    justify-content: space-around;
+>>>>>>> 5acd380b7436c2867e3b8b6070d8ab4d46724af3
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+#income, #expense {
+    width: 40%;
 }
 
-.column {
-    width: 50%;
-    float: left;
-}
-
-.item{
-    width: 30%;
-    margin-bottom: 20px;
+#entries{
+    width:35%;
 }
