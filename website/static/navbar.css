@@ -1,3 +1,4 @@
+/*css for navbar */
 .navbar {
     background-color: #fff;
     height: 80px;
@@ -58,7 +59,7 @@
         transition: 0.3s ease-in-out;
     }
 
-    .nav-link:hover::before, .nav-link.active::before {
+    .nav-link:hover::before {
         width: 100%;
         visibility: visible;
     }
