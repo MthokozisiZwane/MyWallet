@@ -1,11 +1,10 @@
-#This is for all my routes in the website
+#This is for all the routes in the website
 from flask import render_template, redirect, url_for, request, Blueprint, flash
 from website.models import Income, Expense, db, Budget
 from flask_login import login_required, current_user
 from sqlalchemy import extract
 from flask import jsonify
 from datetime import datetime
-
 
 views = Blueprint('views', __name__)
 
@@ -266,6 +265,6 @@ def generate_monthly_reports():
         month = request.form.get('month')
         user_id = current_user.id
         report_data = generate_monthly_report(user_id, year, month)
-        return jsonify(report_data)
-        #return render_template('monthly_report.html', **report_data)
+
+        return render_template('monthly_report.html', **report_data)
     return jsonify({'error': 'Method not allowed'}), 405

@@ -86,3 +86,4 @@ class Budget(db.Model):
               'amount': self.amount,
               'user_id':self.user_id
          }
+                                                                                  
