@@ -37,6 +37,7 @@ def get_budget(user_id, category):
 
 # function or method to update your budget
 def update_budget(user_id, category, new_amount):
+    
     pass # implemented in set_budget
 
 #function to delete your budget
@@ -77,7 +78,7 @@ def generate_monthly_report(user_id, year, month):
 
 
     # Convert Budget instances to dictionaries
-    budget_dicts = [budget.to_dict() for budget in budgets]
+    # budget_dicts = [budget.to_dict() for budget in budgets]
 
     # formating incomes, expenses and budgets into dictionaries
 
@@ -146,7 +147,6 @@ def add_income():
 def add_expense():
     amount = request.form.get('amount')
     category = request.form.get('category')
-    description = request.form.get('description')
     date_str = request.form.get('date')
 
     if not (amount and category and date_str):
@@ -214,7 +214,6 @@ def dashboard():
     return render_template('dashboard.html', user=user)
 
 # budget routes
-#from flask import request
 
 # Set Budget Route
 @views.route('/set_budget', methods=['POST'])

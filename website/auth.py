@@ -6,6 +6,7 @@ from flask_login import login_required, login_user, logout_user, current_user, l
 
 auth = Blueprint('auth', __name__)
 
+# the sign in method
 @auth.route('/sign-in', methods=['GET', 'POST'])
 def sign_in():
     if request.method == 'POST':
@@ -29,6 +30,7 @@ def sign_in():
     return render_template("sign_in.html", user=current_user)
             # flash('Signed in successfully', category='success')
 
+# the sign out method
 @auth.route('/sign-out')
 @login_required
 def sign_out():
@@ -36,7 +38,7 @@ def sign_out():
     flash('You have been signed out.', category='info')
     return redirect(url_for('auth.sign_in'))
     
-
+# the sign up function
 @auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
