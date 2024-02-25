@@ -41,7 +41,9 @@
       <!--NavBar-->
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand me-auto" href="{{url_for('views.home')}}">MyWallet</a>
+          <a class="navbar-brand me-auto" href="{{url_for('views.home')}}"
+            >MyWallet</a
+          >
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
@@ -88,57 +90,59 @@
               </ul>
             </div>
           </div>
-          <a href="{{ url_for('auth.sign_out') }}"><button class="signout-button">Sign Out</button></a>
+          <a href="{{ url_for('auth.sign_out') }}"
+            ><button class="signout-button">Sign Out</button></a
+          >
           <button
-         class="navbar-toggler pe-0"
-         type="button"
-         data-bs-toggle="offcanvas"
-         data-bs-target="#offcanvasNavbar"
-         aria-controls="offcanvasNavbar"
-         aria-label="Toggle navigation"
-       >
-         <span class="navbar-toggler-icon"></span>
-       </button>
+            class="navbar-toggler pe-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
       </nav>
       <!--End Navbar-->
     </header>
     <div class="container">
       <h2>Welcome, {{ user.first_name }}</h2>
-    <div class="rex">
-      <div class="wrapper">
-        <h3>Income</h3>
-        <ul>
-          {% for income_entry in user.income_entries %}
-          <li>
-            {{ income_entry.amount }} - {{ income_entry.category }} - {{
-            income_entry.date }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+      <div class="rex">
+        <div class="wrapper">
+          <h3>Income</h3>
+          <ul>
+            {% for income_entry in user.income_entries %}
+            <li>
+              {{ income_entry.amount }} - {{ income_entry.category }} - {{
+              income_entry.date }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
-      <div class="wrapper">
-        <h3>Expenses</h3>
-        <ul>
-          {% for expense_entry in user.expense_entries %}
-          <li>
-            {{ expense_entry.amount }} - {{ expense_entry.category }} - {{
-            expense_entry.date }}
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+        <div class="wrapper">
+          <h3>Expenses</h3>
+          <ul>
+            {% for expense_entry in user.expense_entries %}
+            <li>
+              {{ expense_entry.amount }} - {{ expense_entry.category }} - {{
+              expense_entry.date }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
-      <div class="wrapper">
-        <h3>Budget</h3>
-        <ul>
-          {% for budget_entry in user.budget_entries %}
-          <li>{{ budget_entry.amount }} - {{ budget_entry.category }}</li>
-          {% endfor %}
-        </ul>
+        <div class="wrapper">
+          <h3>Budget</h3>
+          <ul>
+            {% for budget_entry in user.budget_entries %}
+            <li>{{ budget_entry.amount }} - {{ budget_entry.category }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-    </div>
     </div>
   </body>
 </html>

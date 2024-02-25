@@ -1,20 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-*{
-    /* margin: 0;
-    padding: 0;
-    box-sizing: border-box; */
+* {
     font-family: 'Poppins', sans-serif;
 }
 
 /* Styles for body */
 body {
+    /* Light blue background color */
     background-color: #dfe9f5;
+
 }
-.container{
+
+.container {
     margin-top: 150px;
+    position: relative;
 }
-.wrapper{
+
+.background-image {
+    background-image: url(images/image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
     width: 330px;
     padding: 2rem 1rem;
     margin: 50px auto;
@@ -24,7 +48,7 @@ body {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
-.rex{
+.rex {
     display: flex;
     gap: 3.5em;
 }
@@ -32,15 +56,20 @@ body {
 /* Styles for headings */
 h1 {
     font-size: 2rem;
-    color: #07001f; /* Dark text color */
+    /* Dark text color */
+    color: #07001f;
+
     margin-bottom: 1.2rem;
     font-weight: bold;
 }
-#title{
+
+#title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    color: rgb(17, 107, 143);
-    font-weight: normal;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: wavy;
+    cursor: pointer;
 }
 
 
@@ -53,11 +82,11 @@ a {
 
 /* Styles for forms */
 form input {
-     width: 92%;
-    outline:none;
-    border:1px solid #fff;
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
     padding: 12px 20px;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
     border-radius: 20px;
     background: #e4e4e4;
 }
@@ -67,7 +96,7 @@ label {
     margin-bottom: 5px;
 }
 
-.text-entry{
+.text-entry {
     display: flex;
     gap: 0.5rem;
 }
@@ -80,13 +109,15 @@ textarea {
     width: 90%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc; /* Light grey border */
+    /* Light grey border */
+    border: 1px solid #ccc;
+
     border-radius: 10px;
     box-sizing: border-box;
 }
 
 button {
-   background-color: rgb(17, 107, 143);
+    background-color: rgb(17, 107, 143);
     color: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -95,37 +126,39 @@ button {
     border-radius: 50px;
     text-decoration: none;
     transition: 0.3s background-color;
-} 
-
-button:hover {
-    background: rgba(17, 107, 143, 0.877); /* Slightly transparent navy blue button color on hover*/
 }
 
-input:focus{
+button:hover {
+    /* Slightly transparent navy blue button color on hover*/
+    background: rgba(17, 107, 143, 0.877);
+
+}
+
+input:focus {
     border: 1px solid rgb(192, 192, 192);
 }
 
-.terms{
+.terms {
     margin-top: 0.2rem;
 }
 
-.terms input{
+.terms input {
     height: 1em;
     width: 1em;
     vertical-align: middle;
     cursor: pointer;
 }
 
-.terms label{
+.terms label {
     font-size: 0.7rem;
 }
 
-.terms a{
-    color:rgb(17, 107, 143);
+.terms a {
+    color: rgb(17, 107, 143);
     text-decoration: none;
 }
 
-.member{
+.member {
     font-size: 0.8rem;
     margin-top: 1.4rem;
     color: #636363;
@@ -155,76 +188,36 @@ li {
 }
 
 .alert-success {
-    color: #3c763d; /* Green success alert text color */
-    background-color: #dff0d8; /* Light green success alert background color */
-    border-color: #d6e9c6; /* Light green success alert border color */
+    /* Green success alert text color */
+    color: #3c763d;
+    /* Light green success alert background color */
+    background-color: #dff0d8;
+    /* Light green success alert border color */
+    border-color: #d6e9c6;
+
 }
 
 .alert-danger {
-    color: #a94442; /* Red danger alert text color */
-    background-color: #f2dede; /* Light red danger alert background color */
-    border-color: #ebccd1; /* Light red danger alert border color */
+    /* Red danger alert text color */
+    color: #a94442;
+    /* Light red danger alert background color */
+    background-color: #f2dede;
+    /* Light red danger alert border color */
+    border-color: #ebccd1;
+
 }
 
 
-<<<<<<< HEAD
-/* menu button*/
-.menu-btn {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-}
-
-.menu {
-    display: block;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu.active {
-        display: block;
-    }
-    
-=======
-#budget{
+#budget {
     width: auto;
     justify-content: space-around;
->>>>>>> 5acd380b7436c2867e3b8b6070d8ab4d46724af3
 }
 
-#income, #expense {
+#income,
+#expense {
     width: 40%;
 }
 
-#entries{
-    width:35%;
+#entries {
+    width: 35%;
 }

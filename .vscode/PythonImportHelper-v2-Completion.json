@@ -1,0 +1,493 @@
+[
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "Income",
+        "importPath": "website.models",
+        "description": "website.models",
+        "isExtraImport": true,
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "Expense",
+        "importPath": "website.models",
+        "description": "website.models",
+        "isExtraImport": true,
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "website.models",
+        "description": "website.models",
+        "isExtraImport": true,
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "Budget",
+        "importPath": "website.models",
+        "description": "website.models",
+        "isExtraImport": true,
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "extract",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "website",
+        "description": "website",
+        "isExtraImport": true,
+        "detail": "website",
+        "documentation": {}
+    },
+    {
+        "label": "sign_in",
+        "kind": 2,
+        "importPath": "website.auth",
+        "description": "website.auth",
+        "peekOfCode": "def sign_in():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        password = request.form.get('password')\n        if not (email and password):\n            flash('Email and password are required.', category='error')\n            return redirect(url_for('auth.sign_in'))\n        user = User.query.filter_by(email=email).first()\n        if user:\n            if password and check_password_hash(user.password, password):",
+        "detail": "website.auth",
+        "documentation": {}
+    },
+    {
+        "label": "sign_out",
+        "kind": 2,
+        "importPath": "website.auth",
+        "description": "website.auth",
+        "peekOfCode": "def sign_out():\n    logout_user()\n    flash('You have been signed out.', category='info')\n    return redirect(url_for('auth.sign_in'))\n# the sign up function\n@auth.route('/sign-up', methods=['GET', 'POST'])\ndef sign_up():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        first_name = request.form.get('firstName')",
+        "detail": "website.auth",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "kind": 2,
+        "importPath": "website.auth",
+        "description": "website.auth",
+        "peekOfCode": "def sign_up():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        first_name = request.form.get('firstName')\n        password1 = request.form.get('password1')\n        password2 = request.form.get('password2')\n        if not (email and first_name and password1 and password2):\n            flash('All fields are required.', category='error')\n            return redirect(url_for('auth.sign_up'))\n        if len(email) < 4:",
+        "detail": "website.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "website.auth",
+        "description": "website.auth",
+        "peekOfCode": "auth = Blueprint('auth', __name__)\n# the sign in method\n@auth.route('/sign-in', methods=['GET', 'POST'])\ndef sign_in():\n    if request.method == 'POST':\n        email = request.form.get('email')\n        password = request.form.get('password')\n        if not (email and password):\n            flash('Email and password are required.', category='error')\n            return redirect(url_for('auth.sign_in'))",
+        "detail": "website.auth",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "website.models",
+        "description": "website.models",
+        "peekOfCode": "class User(db.Model, UserMixin):\n    id = db.Column(db.Integer, primary_key=True)\n    email = db.Column(db.String(150), unique=True, nullable=False)\n    first_name = db.Column(db.String(150), unique=True, nullable=False)\n    password = db.Column(db.String(150), nullable=False)\n    income_entries = db.relationship('Income', backref='user', lazy=True)\n    expense_entries = db.relationship('Expense', backref='user', lazy=True)\n    budget_entries = db.relationship('Budget', backref='user', lazy=True)\n    def __init__(self, email, first_name, password):\n        self.email = email",
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "Income",
+        "kind": 6,
+        "importPath": "website.models",
+        "description": "website.models",
+        "peekOfCode": "class Income(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    amount = db.Column(db.Float, nullable=False)\n    date = db.Column(db.DateTime(timezone=True),default=func.now())\n    category = db.Column(db.String(50), nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)\n    #initialize income parameters\n    def __init__(self, amount, date, category, user_id):\n        self.amount = amount\n        self.date = date",
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "Expense",
+        "kind": 6,
+        "importPath": "website.models",
+        "description": "website.models",
+        "peekOfCode": "class Expense(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    amount = db.Column(db.Float, nullable=False)\n    date = db.Column(db.Date, nullable=False)\n    category = db.Column(db.String(50), nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'),nullable=False)\n    #initilize expense parameters\n    def __init__(self, amount, date, category, user_id):\n            self.amount = amount\n            self.date = date",
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "Budget",
+        "kind": 6,
+        "importPath": "website.models",
+        "description": "website.models",
+        "peekOfCode": "class Budget(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    category = db.Column(db.String(50), nullable=False)\n    amount = db.Column(db.Float, nullable=False)\n    user_id = db.Column(db.Integer, db.ForeignKey('user.id'),nullable=False)\n    def __init__(self, user_id, category, amount):\n        self.user_id = user_id\n        self.category = category\n        self.amount = amount\n    # serializing to json format",
+        "detail": "website.models",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def home():\n    return render_template('home.html',user=current_user)\n# add or set a budget\ndef set_budget(user_id, category, amount):\n    # Check if a budget already exists for the given category and user\n    existing_budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if existing_budget:\n        # Update the existing budget\n        existing_budget.amount = amount\n    else:",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "set_budget",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def set_budget(user_id, category, amount):\n    # Check if a budget already exists for the given category and user\n    existing_budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if existing_budget:\n        # Update the existing budget\n        existing_budget.amount = amount\n    else:\n        # Create a new budget entry\n        new_budget = Budget(user_id=user_id, category=category, amount=amount)\n        db.session.add(new_budget)",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_budget",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def get_budget(user_id, category):\n    budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    return budget\n# function or method to update your budget\ndef update_budget(user_id, category, new_amount):\n    pass # implemented in set_budget\n#function to delete your budget\ndef delete_budget(user_id, category):\n    budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if budget:",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "update_budget",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def update_budget(user_id, category, new_amount):\n    pass # implemented in set_budget\n#function to delete your budget\ndef delete_budget(user_id, category):\n    budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if budget:\n        db.session.delete(budget)\n        db.session.commit()\n        flash('Budget deleted successfully', 'sucess')\n# Generate monthly report",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_budget",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def delete_budget(user_id, category):\n    budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if budget:\n        db.session.delete(budget)\n        db.session.commit()\n        flash('Budget deleted successfully', 'sucess')\n# Generate monthly report\ndef generate_monthly_report(user_id, year, month):\n    # Retrieve income entries for the specified month and year\n    incomes = Income.query.filter(",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "generate_monthly_report",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def generate_monthly_report(user_id, year, month):\n    # Retrieve income entries for the specified month and year\n    incomes = Income.query.filter(\n        extract('year', Income.date) == year,\n        extract('month', Income.date) == month,\n        Income.user_id == user_id\n    ).all()\n    # Retrieve expense entries for the specified month and year\n    expenses = Expense.query.filter(\n        extract('year', Expense.date) == year,",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_income",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def add_income():\n    amount = request.form.get('amount')\n    category = request.form.get('category')\n    description = request.form.get('description')\n    date_str = request.form.get('date')\n    if not (amount and category and date_str):\n        flash('Please fill in all required fields for income.', 'error')\n        return redirect(url_for('views.income_expense'))\n    try:\n        # converting date string to datetime object",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_expense",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def add_expense():\n    amount = request.form.get('amount')\n    category = request.form.get('category')\n    date_str = request.form.get('date')\n    if not (amount and category and date_str):\n        flash('Please fill in all required fields for expense.', 'error')\n        return redirect(url_for('views.income_expense'))\n    try:\n        # converting date string to datetime object\n        date = datetime.strptime(date_str, '%Y-%m-%d')",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_income",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def delete_income(entry_id):\n    income_to_delete = Income.query.get(entry_id)\n    if income_to_delete and income_to_delete.user_id == current_user.id:\n        db.session.delete(income_to_delete)\n        db.session.commit()\n        flash('Income deleted successfully.', 'success')\n    else:\n        flash('Income not found or you do not have permission to delete it.', 'error')\n    return redirect(url_for('views.income_expense'))\n# function to delete expense entry",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_expense",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def delete_expense(entry_id):\n    expense_to_delete = Expense.query.get(entry_id)\n    if expense_to_delete and expense_to_delete.user_id == current_user.id:\n        db.session.delete(expense_to_delete)\n        db.session.commit()\n        flash('Expense deleted successfully.', 'success')\n    else:\n        flash('Expense not found or you do not have permission to delete it.', 'error')\n    return redirect(url_for('views.income_expense'))\n@views.route('/income_expense')",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "income_expense",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def income_expense():\n    user = current_user #define user\n    return render_template('income_expense.html', user=user)\n@views.route('/monthly_report')\n@login_required\ndef monthly_report():\n    return render_template('monthly_report.html')\n@views.route('/dashboard')\n@login_required\ndef dashboard():",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "monthly_report",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def monthly_report():\n    return render_template('monthly_report.html')\n@views.route('/dashboard')\n@login_required\ndef dashboard():\n    user = current_user\n    return render_template('dashboard.html', user=user)\n# budget routes\n# Set Budget Route\n@views.route('/set_budget', methods=['POST'])",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def dashboard():\n    user = current_user\n    return render_template('dashboard.html', user=user)\n# budget routes\n# Set Budget Route\n@views.route('/set_budget', methods=['POST'])\n@login_required\ndef set_budgets():\n    if request.method == 'POST':\n        user_id = current_user.id",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "set_budgets",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def set_budgets():\n    if request.method == 'POST':\n        user_id = current_user.id\n        category = request.form.get('category')\n        amount_str = request.form.get('amount')\n        if amount_str is not None:\n            amount = float(amount_str)\n            set_budget(user_id, category, amount)\n        return redirect(url_for('views.dashboard'))\n    return redirect(url_for('views.dashboard'))",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "update_budgets",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def update_budgets(category):\n    if request.method == 'POST':\n        user_id = current_user.id\n        new_amount_str = request.form.get('new_amount')\n        if new_amount_str is not None:\n            new_amount = float(new_amount_str)\n            update_budget(user_id, category, new_amount)\n        return redirect(url_for('views.dashboard'))\n    return redirect(url_for('views.dashboard'))\n# Delete Budget Route",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_budgets",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def delete_budgets(category):\n    if request.method == 'POST':\n        user_id = current_user.id\n        delete_budget(user_id, category)\n        return redirect(url_for('views.dashboard'))\n    return redirect(url_for('views.dashboard'))\n# Route for generating the monthly report\n@views.route('/generate_monthly_reports', methods=['POST'])\n@login_required\ndef generate_monthly_reports():",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "generate_monthly_reports",
+        "kind": 2,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "def generate_monthly_reports():\n    if request.method == 'POST':\n        year = request.form.get('year')\n        month = request.form.get('month')\n        user_id = current_user.id\n        report_data = generate_monthly_report(user_id, year, month)\n        return render_template('monthly_report.html', **report_data)\n    return jsonify({'error': 'Method not allowed'}), 405",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "kind": 5,
+        "importPath": "website.views",
+        "description": "website.views",
+        "peekOfCode": "views = Blueprint('views', __name__)\n@views.route('/')\n@login_required\ndef home():\n    return render_template('home.html',user=current_user)\n# add or set a budget\ndef set_budget(user_id, category, amount):\n    # Check if a budget already exists for the given category and user\n    existing_budget = Budget.query.filter_by(user_id=user_id, category=category).first()\n    if existing_budget:",
+        "detail": "website.views",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = create_app()\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    }
+]

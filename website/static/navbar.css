@@ -7,29 +7,31 @@
     padding: 0.5rem;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-weight: 500;
     color: rgb(17, 107, 143);
-    font-size: 24px ;
+    font-size: 24px;
     transition: 0.3s color;
 }
 
-.signout-button{
-     font-size: 14px;
-     font-weight: normal;
-     padding: 8px 20px;
+.signout-button {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 20px;
 }
-.signout-button:hover{
+
+.signout-button:hover {
     background-color: rgba(17, 107, 143, 0.877);
 }
 
-.navbar-toggler{
+.navbar-toggler {
     color: #000;
     border: none;
     font-size: 1.25rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
     box-shadow: none;
     outline: none;
 }
@@ -46,7 +48,7 @@
 }
 
 @media(min-width: 991px) {
-    .nav-link::before{
+    .nav-link::before {
         content: "";
         position: absolute;
         bottom: 0;
